@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="el">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+  </head>
+  <body>
+  <h1>Employees</h1>
+  {% if results %}
+  <table border>
+  <tr><th>ID</th><th>Name</th><th>Age</th><th>Salary</th></tr>
+  {% for row in results %}
+    <tr><td>{{ row[0] }}</td><td>{{ row[1]|escape }}</td><td>{{ row[2] }}</td><td>{{ row[3] }}</td></tr>
+  {% endfor %}
+  </table>
+  {% endif %}
+  </body>
+</html>
+
